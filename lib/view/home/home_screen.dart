@@ -32,12 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // @override
-  // void dispose() {
-  //   Provider.of<MovieViewModel>(context, listen: false).dispose();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     var viewModel = Provider.of<MovieViewModel>(context);
