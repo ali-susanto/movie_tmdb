@@ -20,19 +20,20 @@ class DetailMovieScreen extends StatefulWidget {
 class _DetailMovieScreenState extends State<DetailMovieScreen> {
   @override
   void initState() {
-    super.initState();
     var provider = Provider.of<DetailMovieViewModel>(context, listen: false);
     if (mounted) {
       WidgetsBinding.instance.addPersistentFrameCallback((timeStamp) async {
         provider.getMovieDetail(idMovie: widget.idMovie);
       });
     }
+    super.initState();
   }
 
   @override
   void dispose() {
-    Provider.of<DetailMovieViewModel>(context, listen: false).dispose();
     super.dispose();
+    Provider.of<DetailMovieViewModel>(context, listen: false).dispose();
+    // Provider.of<MovieViewModel>(context).dispose();
   }
 
   @override
@@ -156,24 +157,8 @@ class _DetailMovieScreenState extends State<DetailMovieScreen> {
                                           const TextStyle(color: Colors.white),
                                     ),
                                     const SizedBox(height: 16),
-                                    // const Text(
-                                    //   'Recommendations',
-                                    //   style: TextStyle(
-                                    //       fontSize: 18,
-                                    //       fontWeight: FontWeight.w600,
-                                    //       color: Colors.white),
-                                    // ),
-                                    // const SizedBox(height: 8),
                                   ],
                                 ),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.topCenter,
-                              child: Container(
-                                color: Colors.white,
-                                height: 4,
-                                width: 48,
                               ),
                             ),
                           ],
