@@ -156,11 +156,6 @@ class _DetailMovieScreenState extends State<DetailMovieScreen> {
                                           const TextStyle(color: Colors.white),
                                     ),
                                     const SizedBox(height: 16),
-                                    ...List.generate(
-                                        6,
-                                        (index) => Card(
-                                              child: Text('Data $index'),
-                                            ))
                                     // const Text(
                                     //   'Recommendations',
                                     //   style: TextStyle(
